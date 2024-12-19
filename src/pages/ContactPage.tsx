@@ -1,7 +1,37 @@
 import { motion } from 'framer-motion';
 import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone } from 'lucide-react';
+import { useState } from 'react';
+import { supabase } from '../lib/supabase'; // Ensure you have this setup
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [feedbackMessage, setFeedbackMessage] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setFeedbackMessage(null);
+
+    try {
+      const { error } = await supabase.from('messages').insert([formData]);
+
+      if (error) throw error;
+
+      setFeedbackMessage('Thank you! Your message has been sent.');
+      setFormData({ name: '', email: '', message: '' });
+    } catch  {
+      setFeedbackMessage('An error occurred while sending your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
@@ -55,11 +85,13 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium mb-2">Name</label>
                 <input
                   type="text"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-2 bg-gray-800 rounded-lg border border-gray-700 focus:outline-none focus:border-yellow-500"
                   required
                 />
@@ -68,6 +100,8 @@ export default function ContactPage() {
                 <label className="block text-sm font-medium mb-2">Email</label>
                 <input
                   type="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-2 bg-gray-800 rounded-lg border border-gray-700 focus:outline-none focus:border-yellow-500"
                   required
                 />
@@ -75,6 +109,8 @@ export default function ContactPage() {
               <div>
                 <label className="block text-sm font-medium mb-2">Message</label>
                 <textarea
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-2 bg-gray-800 rounded-lg border border-gray-700 focus:outline-none focus:border-yellow-500"
                   rows={6}
                   required
@@ -83,9 +119,15 @@ export default function ContactPage() {
               <button
                 type="submit"
                 className="w-full bg-yellow-500 text-black py-3 rounded-lg hover:bg-yellow-400 transition-colors"
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
+              {feedbackMessage && (
+                <p className={`text-center mt-4 ${feedbackMessage.includes('Thank') ? 'text-green-500' : 'text-red-500'}`}>
+                  {feedbackMessage}
+                </p>
+              )}
             </form>
           </div>
         </motion.div>

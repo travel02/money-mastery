@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import BookPage from './pages/BookPage';
 import BlogPage from './pages/BlogPage';
+import ContactPage from './pages/ContactPage';
 export default function App() {
   return (
     <Router>
@@ -16,7 +17,7 @@ export default function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/book" element={<BookPage />} />
             <Route path="/blogs" element={<BlogPage />} />
-            <Route path="/contact" element={<div>Contact Page</div>} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
         <Footer />
