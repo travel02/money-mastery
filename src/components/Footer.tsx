@@ -99,7 +99,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-500">Copyright © 2024. All rights reserved.</p>
           <p className="text-gray-500">This website is owned by Dr. Sanjay Srivastava.</p>
-          <p className="text-xs text-gray-600 mt-2">Made with ❤️ by Anvay Srivastava</p>
+          <p className="text-xs text-gray-600 mt-2">Made by Anvay Srivastava</p>
         </div>
       </div>
     </footer>
