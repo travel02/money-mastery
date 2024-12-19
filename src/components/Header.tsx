@@ -5,9 +5,6 @@ import { Facebook, Instagram, Linkedin, Youtube, Menu, X } from 'lucide-react';
 import { quotes } from '../data/quotes';
 import logo from './assets/logo.png';
 
-
-
-
 export default function Header() {
   const [currentQuote, setCurrentQuote] = useState(quotes[0]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,11 +24,10 @@ export default function Header() {
         {/* Navigation */}
         <nav className="py-4 flex justify-between items-center">
           <Link to="/" className="h-16">
-          <img src={logo} alt="Money Mastery Logo" className="h-20 w-auto object-contain" />
-
+            <img src={logo} alt="Money Mastery Logo" className="h-20 w-auto object-contain" />
           </Link>
 
-          {/* Mobilpnge Menu Button */}
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
