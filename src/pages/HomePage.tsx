@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import bookCover from './assets/book.jpg'; // Adjusted path to the book image
-const dummyImage = "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&q=80";
+import bookCover from './assets/book.jpg';
+import a from './assets/a.jpg';
+import b from './assets/b.jpg';
+import c from './assets/c.jpg';
+import d from './assets/d.jpg';
+import e from './assets/e.jpg'; 
+import f from './assets/f.jpg';// Adjusted path to the book image
 
 export default function HomePage() {
   return (
@@ -32,9 +37,9 @@ export default function HomePage() {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&q=80"
-                alt="Dr. Sanjay Srivastava"
-                className="rounded-lg shadow-lg"
+                src={d}
+                alt="Dr.Sanjay Srivastava"
+                className="rounded-lg shadow-lg relative h-auto"
               />
             </motion.div>
           </div>
@@ -47,12 +52,12 @@ export default function HomePage() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="relative rounded-lg shadow-lg"
             >
               <img
                 src={bookCover}
                 alt="Money Mastery Book Cover"
-                className="rounded-lg shadow-lg w-full max-h- object-contain"
+                className="rounded-lg shadow-lg realtive h-auto"
               />
             </motion.div>
             <motion.div
@@ -128,8 +133,8 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="grid grid-cols-2 gap-4"
             >
-              <img src={dummyImage} alt="About 1" className="rounded-lg" />
-              <img src={dummyImage} alt="About 2" className="rounded-lg mt-4" />
+              <img src={a} alt="About 1" className="rounded-lg h-auto relative" />
+              <img src={b} alt="About 2" className="rounded-lg mt-4 h-80 relative"  />
             </motion.div>
           </div>
         </section>
@@ -153,7 +158,7 @@ export default function HomePage() {
                   heading: "Problem",
                   content:
                     "Financial struggles stem from limited literacy, debt, inconsistent income, poor habits, lack of savings, fear of investing, and unclear goals, leading to instability, missed opportunities, and financial insecurity.",
-                  icon: "⚠️",
+                  icon: "💡",
                 },
                 {
                   heading: "Our Vision",
@@ -263,17 +268,22 @@ export default function HomePage() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-20" 
           >
             <img
-              src="https://via.placeholder.com/300"
+              src={c}
               alt="About 1"
-              className="rounded-lg shadow-md"
+              className="rounded-lg shadow-md relative min-h-72 min-w-96"
             />
             <img
-              src="https://via.placeholder.com/300"
+              src={e}
               alt="About 2"
-              className="rounded-lg shadow-md mt-4"
+              className="rounded-lg shadow-md mt-28 relative"
+            />
+            <img
+              src={f}
+              alt="About 3"
+              className="rounded-lg shadow-md -mt-44  min-h-72 min-w-96"
             />
           </motion.div>
         </div>
