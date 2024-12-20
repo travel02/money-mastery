@@ -126,11 +126,10 @@ export default function BookPage() {
 {/* Author's Motivation */}
 <section className="mb-12">
   <h2 className="text-3xl font-bold mb-4">My Motivation to Write the Book</h2>
+
   <p className="text-gray-300">
-    In 2014, I faced a financial crisis that left me with almost nothing. With ₹7,000 in my account, a staggering ₹19 lakh in debt, and no steady income, I had to rebuild my financial life from the ground up. That turning point taught me invaluable lessons about resilience, disciplined money habits, and the importance of financial planning.
-  </p>
-  <p className="text-gray-300">
-    This journey inspired me to pen <em>Money Mastery</em>—a guide to help others avoid the pitfalls I faced and fast-track their path to financial success. My goal is to equip readers with the knowledge and tools they need to transform their financial reality and achieve abundance.
+  In 2014, I faced a financial crisis that left me jobless, with only ₹7,000 in my account and a staggering ₹19 lakh in debt. With no steady income, I had no choice but to rebuild my life from the ground up. This challenging period taught me invaluable lessons about resilience, the importance of disciplined money habits, and the power of smart financial planning. These principles not only transformed my financial reality but also inspired me to share my journey through Money Mastery.
+Through this book, I share practical strategies to help others avoid financial pitfalls and fast-track their journey to success. If I could turn my life around, so can you. Let Money Mastery guide you to financial freedom.
   </p>
 </section>
 

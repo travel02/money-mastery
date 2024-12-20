@@ -31,19 +31,13 @@ export default function AboutPage() {
             className="bg-gray-800 p-8 rounded-lg shadow-xl md:w-2/3 text-gray-300"
           >
             <p className="text-lg leading-relaxed">
-              I am Sanjay Srivastava, an engineer by education and a finance enthusiast by passion. With a robust foundation in engineering, I spent over three decades working in senior leadership roles in multinational companies. My career journey includes navigating through the complexities of supply chain management and strategic planning, where I honed my problem-solving skills and built a reputation for delivering innovative solutions.
+            I am Dr. Sanjay Srivastava—an engineer by profession and a finance enthusiast by passion. With over three decades of experience in senior leadership roles across multinational companies, my career has been deeply rooted in delivering innovative, process-driven solutions. I’ve specialized in areas such as supply chain management and customer relationship management, where I developed expertise in problem-solving, cost optimization, and leveraging digitalization and automation to drive efficiency.
             </p>
             <p className="text-lg leading-relaxed mt-4">
-              However, my journey took an unexpected turn in January 2014 when I lost my job after 22 years of a steady corporate career. With just ₹7,000 in my account, ₹19 lakh in loans, and mounting EMI defaults, I faced one of the toughest periods of my life. Despite a lifetime income of over ₹1 crore, my Lifetime Wealth Ratio (LWR) was just 4%, reflecting the gap between earning and retaining wealth.
+            In the last three years, I transformed my approach by applying these principles of process-driven excellence to wealth management. Guided by extraordinary mentors like Dr. John DeMartini, Blair Singer, Thaddeus Lawrence, and Arokiaswamy Velumani, I’ve refined my strategies for financial growth, resilience, and independence. This journey reinforced the power of disciplined systems, self-growth, and smart financial planning.
             </p>
             <p className="text-lg leading-relaxed mt-4">
-              Determined to rebuild my life, I transitioned from a conventional corporate mindset to a more entrepreneurial and financially disciplined approach. In September 2014, I restarted my career at Hero MotoCorp Ltd., where I worked for nearly nine years. During this time, I significantly improved my financial standing, raising my LWR to over 70% and doubling my net worth in just three years. My commitment to personal growth and resilience even helped me recover from a brain stroke in 2021, which left me temporarily paralyzed on my left side.
-            </p>
-            <p className="text-lg leading-relaxed mt-4">
-              Post my corporate journey, I have dedicated the past 18 months to expanding my horizons in the stock market, mutual funds, real estate, and other investment avenues. This transition from a corporate leader to a financial strategist has inspired me to pen my learnings and experiences in my book, <em>Money Mastery: A Simple Path to Inner Wealth and Financial Success</em>. This book encapsulates the wealth-building principles that helped me rise from financial despair to stability and success, offering readers a practical guide to mastering their inner game of wealth.
-            </p>
-            <p className="text-lg leading-relaxed mt-4">
-              My journey stands as a testament to resilience, strategic thinking, and the power of disciplined financial habits. Today, I am on a mission to empower individuals to take control of their finances and transform their lives by understanding and mastering their money habits.
+            All these insights and strategies are captured in my book, Money Mastery. It’s a culmination of my professional expertise and personal transformation, designed to help others create process-driven approaches to building wealth and achieving financial freedom. My mission is to empower individuals to take charge of their finances, optimize their resources, and live abundantly.
             </p>
           </motion.div>
         </div>

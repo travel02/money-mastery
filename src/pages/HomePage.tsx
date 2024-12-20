@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import bookCover from './assets/book.jpg'; // Adjusted path to the book image
+const dummyImage = "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&q=80";
 
 export default function HomePage() {
   return (
@@ -17,7 +19,7 @@ export default function HomePage() {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center md:text-left">
                 Your Money Mastery Coach
-                <span className="block text-yellow-500">Dr. Sanjay Srivastava</span>
+                <span className="block text-yellow-500">Dr. SANJAY SRIVASTAVA</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 mb-6">
                 Unlock your financial potential with tailored coaching and effective strategies.
@@ -94,60 +96,189 @@ export default function HomePage() {
             </motion.div>
           </div>
         </section>
-
-        {/* Goals Section */}
-        <section className="space-y-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-center mb-6"
-          >
-            Our Goals
-          </motion.h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              "Empower individuals with financial knowledge",
-              "Create sustainable wealth building strategies",
-              "Guide you towards financial independence"
-            ].map((goal, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="bg-gray-700 p-6 rounded-lg"
+ {/* About Preview Section */}
+ <section className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold mb-4">About Me</h2>
+              <p className="text-gray-300 mb-6">
+                With over three decades of leadership experience, Dr. Sanjay Srivastava’s journey took a
+                transformative financial turn in 2014. From facing severe financial challenges to achieving
+                stability and success, his inspiring story culminated in the creation of{" "}
+                <em>Money Mastery: A Simple Path to Inner Wealth and Financial Success</em>. Today, he empowers
+                individuals to take charge of their finances, develop disciplined money habits, and build
+                sustainable wealth for the future.
+              </p>
+              <Link
+                to="/about"
+                className="inline-flex items-center text-yellow-500 hover:text-yellow-400 transition-colors"
               >
-                <p className="text-lg">{goal}</p>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* This is for You Section */}
-        <section className="space-y-6">
-          <h2 className="text-3xl font-bold text-center mb-6">This is for You If...</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              "You want to achieve financial freedom",
-              "You're looking to grow your wealth",
-              "You need expert guidance for investments"
-            ].map((text, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="bg-gray-700 p-6 rounded-lg"
-              >
-                <p className="text-lg">{text}</p>
-              </motion.div>
-            ))}
+                Learn More <ArrowRight className="ml-2" size={20} />
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="grid grid-cols-2 gap-4"
+            >
+              <img src={dummyImage} alt="About 1" className="rounded-lg" />
+              <img src={dummyImage} alt="About 2" className="rounded-lg mt-4" />
+            </motion.div>
           </div>
         </section>
       </div>
+      <br></br>
+      <div className="min-h-screen bg-blue-50 py-20">
+      <div className="container mx-auto px-4">
+        {/* Top Section */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="bg-blue-100 p-10 rounded-3xl shadow-lg"
+
+        >
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Left Section */}
+            <div className="space-y-6">
+              {[
+                {
+                  heading: "Problem",
+                  content:
+                    "Financial struggles stem from limited literacy, debt, inconsistent income, poor habits, lack of savings, fear of investing, and unclear goals, leading to instability, missed opportunities, and financial insecurity.",
+                  icon: "⚠️",
+                },
+                {
+                  heading: "Our Vision",
+                  content:
+                    "To inspire and empower individuals to achieve financial freedom, transforming lives through actionable knowledge and disciplined financial habits.",
+                  icon: "🌟",
+                },
+                {
+                  heading: "Our Mission",
+                  content:
+                    "To provide practical tools, insights, and strategies that guide individuals in overcoming financial challenges, building wealth, and creating a future of lasting abundance.",
+                  icon: "🎯",
+                },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.3 }}
+                  className="bg-white text-gray-900 p-6 rounded-xl shadow-md flex items-start"
+                >
+                  <div className="text-3xl mr-4">{item.icon}</div>
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-3">{item.heading}</h3>
+                    <p className="text-lg">{item.content}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Right Section */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-blue-900 bg-blue-50 p-8 rounded-xl shadow-md flex flex-col justify-center"
+            >
+              <h3 className="text-5xl font-bold mb-8 text-center">
+                "Your Journey to Financial Freedom Begins Here"
+              </h3>
+              <p className="text-lg leading-relaxed text-justify">
+                Welcome to <span className="font-bold">Money Mastery</span>, where we simplify the path to wealth and
+                financial independence. Inspired by the principles outlined in the bestselling book{" "}
+                <span className="italic">Money Mastery: A Simple Path to Inner Wealth and Financial Success</span>, this
+                platform is your gateway to mastering money habits, building sustainable wealth, and achieving financial
+                freedom. Whether you’re looking to overcome financial struggles, plan for your future, or simply unlock
+                the secrets to abundance, we provide tools, insights, and strategies to guide you. Start your journey
+                today and take the first step toward a secure and prosperous tomorrow!
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Bottom Section */}
+        <div className="grid md:grid-cols-2 gap-8 mt-16">
+          {/* Left Section: Core Values */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="p-8 rounded-xl shadow-md bg-blue-100"
+          >
+            <h2 className="text-3xl font-bold mb-6 text-center text-blue-900">Core Values</h2>
+            <ul className="space-y-4">
+              <li>
+                <h4 className="text-xl font-semibold text-blue-800">Resilience</h4>
+                <p className="text-gray-700">
+                  Embracing challenges as opportunities for growth and empowering others to rise above financial
+                  setbacks.
+                </p>
+              </li>
+              <li>
+                <h4 className="text-xl font-semibold text-blue-800">Integrity</h4>
+                <p className="text-gray-700">
+                  Promoting honesty, transparency, and ethical practices in all financial decisions and guidance.
+                </p>
+              </li>
+              <li>
+                <h4 className="text-xl font-semibold text-blue-800">Discipline</h4>
+                <p className="text-gray-700">
+                  Advocating for consistent and responsible financial habits as the foundation for lasting success.
+                </p>
+              </li>
+              <li>
+                <h4 className="text-xl font-semibold text-blue-800">Growth</h4>
+                <p className="text-gray-700">
+                  Encouraging a mindset of continuous learning, adaptability, and improvement in personal finance and
+                  life.
+                </p>
+              </li>
+              <li>
+                <h4 className="text-xl font-semibold text-blue-800">Empowerment</h4>
+                <p className="text-gray-700">
+                  Equipping individuals with the knowledge and tools to take control of their financial future with
+                  confidence.
+                </p>
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* Right Section: Images */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="grid grid-cols-2 gap-4"
+          >
+            <img
+              src="https://via.placeholder.com/300"
+              alt="About 1"
+              className="rounded-lg shadow-md"
+            />
+            <img
+              src="https://via.placeholder.com/300"
+              alt="About 2"
+              className="rounded-lg shadow-md mt-4"
+            />
+          </motion.div>
+        </div>
+      </div>
+    </div>
     </div>
   );
 }
