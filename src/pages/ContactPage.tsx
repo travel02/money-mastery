@@ -17,20 +17,27 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setFeedbackMessage(null);
-
+  
+    console.log('Form Data:', formData); // Log the form data for debugging
+  
     try {
       const { error } = await supabase.from('messages').insert([formData]);
-
-      if (error) throw error;
-
+  
+      if (error) {
+        console.error('Supabase Insert Error:', error); // Log detailed Supabase error
+        throw error;
+      }
+  
       setFeedbackMessage('Thank you! Your message has been sent.');
-      setFormData({ name: '', email: '', message: '' });
-    } catch  {
+      setFormData({ name: '', email: '', message: '' }); // Reset the form on success
+    } catch (error) {
+      console.error('Submission Error:', error); // Log any catch-level errors
       setFeedbackMessage('An error occurred while sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
   };
+  
 
   return (
     <div className="min-h-screen py-20">
