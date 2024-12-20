@@ -56,18 +56,18 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
                 <div className="space-y-4">
                   <a
-                    href="mailto:contact@moneymasterysanjay.com"
+                    href="mailto:moneymasterysanjay@gmail.com"
                     className="flex items-center space-x-3 text-gray-300 hover:text-yellow-500 transition-colors"
                   >
                     <Mail size={20} />
-                    <span>contact@moneymasterysanjay.com</span>
+                    <span>moneymasterysanjay@gmail.com</span>
                   </a>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+7070000000"
                     className="flex items-center space-x-3 text-gray-300 hover:text-yellow-500 transition-colors"
                   >
                     <Phone size={20} />
-                    <span>+1 (234) 567-890</span>
+                    <span>+917070000000</span>
                   </a>
                 </div>
               </div>
