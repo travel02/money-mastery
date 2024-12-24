@@ -4,7 +4,7 @@ export default function BlogPage() {
   const blogs = [
     {
       title: "Understanding Money Mastery: The Key to Financial Control",
-      content: `Money mastery isn’t just about earning more; it’s about managing, growing, and retaining your wealth over time. It’s a concept I delve into deeply in my book, *Money Mastery: A Simple Path to Inner Wealth and Financial Success*, and one that has transformed my own financial journey.  
+      content: `Money mastery isn’t just about earning more; it’s about managing, growing, and retaining your wealth over time. It’s a concept I delve into deeply in my book, <b>Money Mastery: A Simple Path to Inner Wealth and Financial Success</b>, and one that has transformed my own financial journey.  
 
       The first step in money mastery is understanding your current financial habits. Are they helping or hindering your goals? In Chapter 2 of my book, I explore how habits, shaped by upbringing, emotions, and mindset, influence financial decisions.  
 
@@ -14,27 +14,27 @@ export default function BlogPage() {
     },
     {
       title: "Financial Freedom Guide: A Roadmap to Abundance",
-      content: `What does financial freedom mean to you? For some, it’s retiring early; for others, it’s pursuing passions without worrying about money. Whatever your vision, financial freedom requires a clear plan, and I’ve outlined this roadmap in my book, *Money Mastery: A Simple Path to Inner Wealth and Financial Success*.  
+      content: `What does financial freedom mean to you? For some, it’s retiring early; for others, it’s pursuing passions without worrying about money. Whatever your vision, financial freedom requires a clear plan, and I’ve outlined this roadmap in my book, <b>Money Mastery: A Simple Path to Inner Wealth and Financial Success</b>.  
 
       Here are the key steps:  
 
-      1. **Set Clear Financial Goals**: Define your short-term, medium-term, and long-term objectives. In Chapter 7 of my book, I explain how to plan for necessities, luxury purchases, and retirement.  
+      1.<b>Set Clear Financial Goals</b> Define your short-term, medium-term, and long-term objectives. In Chapter 7 of my book, I explain how to plan for necessities, luxury purchases, and retirement.  
 
-      2. **Build Multiple Income Streams**: Relying on a single source of income can be risky. Diversify by exploring investments, side businesses, or freelancing.  
+      2. <b>Build Multiple Income Streams</b>: Relying on a single source of income can be risky. Diversify by exploring investments, side businesses, or freelancing.  
 
-      3. **Prioritize Saving and Investing**: My formula, *Saving = Income - Ego*, highlights the importance of living below your means and directing savings toward wealth-building investments.  
+      3. <b>Prioritize Saving and Investing</b>: My formula, <b>Saving = Income - Ego</b>, highlights the importance of living below your means and directing savings toward wealth-building investments.  
 
-      4. **Understand the Stages of Money Mastery**: Financial freedom is a progression. In Chapter 4, I discuss the eight stages, from dependence to abundance, and how to move forward.  
+      4. <b>Understand the Stages of Money Mastery</b>: Financial freedom is a progression. In Chapter 4, I discuss the eight stages, from dependence to abundance, and how to move forward.  
 
-      5. **Monitor and Adjust**: Regularly review your financial plan and adapt to changes in income, expenses, or life goals.  
+      5. <b>Monitor and Adjust</b>: Regularly review your financial plan and adapt to changes in income, expenses, or life goals.  
 
-      Financial freedom is achievable for anyone willing to commit to disciplined habits and strategic planning. Let *Money Mastery* be your guide on this empowering journey.`,
+      Financial freedom is achievable for anyone willing to commit to disciplined habits and strategic planning. Let <b>Money Mastery</b> be your guide on this empowering journey.`,
     },
     {
       title: "Breaking Free from Financial Struggles: My Journey to Financial Mastery",
       content: `Financial struggles can feel overwhelming, but they often hold the key to life-changing transformations. In 2014, I faced a turning point: losing my job after 22 years, left with just ₹7,000 in my account, ₹19 lakh in loans, and defaulting EMIs. It was a time of despair, but it also sparked my journey toward financial mastery.  
 
-      Through resilience, strategic thinking, and disciplined money habits, I not only rebuilt my life but also doubled my net worth in three years. My book, *Money Mastery: A Simple Path to Inner Wealth and Financial Success*, shares the principles that helped me rise from financial adversity to stability and beyond.  
+      Through resilience, strategic thinking, and disciplined money habits, I not only rebuilt my life but also doubled my net worth in three years. My book, <b>Money Mastery: A Simple Path to Inner Wealth and Financial Success</b>, shares the principles that helped me rise from financial adversity to stability and beyond.  
 
       This journey taught me that wealth is not just about earning but also about understanding your habits, setting clear goals, and having the courage to start over. If you're ready to transform your financial life, my story—and the strategies I share in my book—can guide you toward success.`,
     },
@@ -42,13 +42,13 @@ export default function BlogPage() {
       title: "Comfort Zone = Income Zone: Expanding Your Financial Boundaries",
       content: `Most people underestimate the link between their comfort zone and their income zone. Staying within familiar financial habits might feel safe, but it limits your potential for growth.  
 
-      In *Money Mastery: A Simple Path to Inner Wealth and Financial Success*, I explain how stepping out of your comfort zone can redefine your financial trajectory. For me, this meant transitioning from a secure corporate career to exploring the stock market, mutual funds, and real estate investments after 30 years in traditional roles.  
+      In <b>Money Mastery: A Simple Path to Inner Wealth and Financial Success</b>, I explain how stepping out of your comfort zone can redefine your financial trajectory. For me, this meant transitioning from a secure corporate career to exploring the stock market, mutual funds, and real estate investments after 30 years in traditional roles.  
 
       Growth requires embracing change, taking calculated risks, and continuously upgrading your financial literacy. Ask yourself: Is your comfort zone holding you back from achieving your financial goals? Let my book help you push those boundaries and unlock new opportunities.`,
     },
     {
       title: "The Lifetime Wealth Ratio: A Measure of Financial Success",
-      content: `Have you ever wondered how much of your lifetime income you've retained as wealth? This is what the Lifetime Wealth Ratio (LWR) measures, and it’s a concept I emphasize in my book, *Money Mastery: A Simple Path to Inner Wealth and Financial Success*.  
+      content: `Have you ever wondered how much of your lifetime income you've retained as wealth? This is what the Lifetime Wealth Ratio (LWR) measures, and it’s a concept I emphasize in my book, <b>Money Mastery: A Simple Path to Inner Wealth and Financial Success</b>.  
 
       When I first calculated my LWR in 2014, it was a shocking 4%. Despite earning over ₹1 crore during my career, poor money habits left me with little to show for it. By focusing on saving, investing, and minimizing financial leaks, I raised my LWR to over 70% within a decade.  
 
@@ -56,7 +56,7 @@ export default function BlogPage() {
     },
     {
       title: "Mindset Matters: How Rich People Think and Act Differently",
-      content: `What separates the financially successful from others? It’s not just the size of their paycheck—it’s their mindset. In *Money Mastery: A Simple Path to Inner Wealth and Financial Success*, I explore the habits and thought patterns that distinguish wealthy individuals.  
+      content: `What separates the financially successful from others? It’s not just the size of their paycheck—it’s their mindset. In <b>Money Mastery: A Simple Path to Inner Wealth and Financial Success</b>, I explore the habits and thought patterns that distinguish wealthy individuals.  
 
       Rich people focus on creating value, building assets, and thinking long-term. They invest in self-development and prioritize financial literacy. This mindset shift was pivotal in my journey, helping me recover from financial setbacks and build a more secure future.  
 
@@ -82,7 +82,7 @@ export default function BlogPage() {
             >
               <div className="p-6">
                 <h2 className="text-2xl font-bold text-yellow-500 mb-4">{blog.title}</h2>
-                <p className="text-gray-300 whitespace-pre-line">{blog.content}</p>
+                <p className="text-gray-300 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: blog.content }}></p>
               </div>
             </motion.article>
           ))}

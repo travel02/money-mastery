@@ -4,10 +4,9 @@ import { ArrowRight } from 'lucide-react';
 import bookCover from './assets/book.jpg';
 import a from './assets/a.jpg';
 import b from './assets/b.jpg';
-import c from './assets/c.jpg';
 import d from './assets/d.jpg';
-import e from './assets/e.jpg'; 
-import f from './assets/f.jpg';// Adjusted path to the book image
+import y from './assets/y.jpg';
+import g from './assets/g.jpg';
 
 export default function HomePage() {
   return (
@@ -20,7 +19,7 @@ export default function HomePage() {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1.4 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center md:text-left">
                 Your Money Mastery Coach
@@ -33,7 +32,7 @@ export default function HomePage() {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1.4 }}
               className="relative"
             >
               <img
@@ -51,7 +50,7 @@ export default function HomePage() {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1.4 }}
               className="relative rounded-lg shadow-lg"
             >
               <img
@@ -63,7 +62,7 @@ export default function HomePage() {
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1.4 }}
             >
               <h2 className="text-3xl font-bold mb-4">About the Book</h2>
               <p className="text-gray-300 mb-6">
@@ -108,7 +107,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1.4 }}
             >
               <h2 className="text-3xl font-bold mb-4">About Me</h2>
               <p className="text-gray-300 mb-6">
@@ -130,11 +129,11 @@ export default function HomePage() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="grid grid-cols-2 gap-4"
+              transition={{ duration:1.4 }}
+              className="grid grid-cols-1gap-4"
             >
-              <img src={a} alt="About 1" className="rounded-lg h-auto relative" />
-              <img src={b} alt="About 2" className="rounded-lg mt-4 h-80 relative"  />
+              <img src={y} alt="About 1" className="rounded-lg h-auto" />
+            
             </motion.div>
           </div>
         </section>
@@ -146,7 +145,7 @@ export default function HomePage() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 1.2 }}
           className="bg-blue-100 p-10 rounded-3xl shadow-lg"
 
         >
@@ -195,8 +194,8 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-blue-900 bg-blue-50 p-8 rounded-xl shadow-md flex flex-col justify-center"
+              transition={{ duration: 1.4 }}
+              className="text-white bg-gray-900 p-8 rounded-xl shadow-md flex flex-col justify-center"
             >
               <h3 className="text-5xl font-bold mb-8 text-center">
                 "Your Journey to Financial Freedom Begins Here"
@@ -221,7 +220,7 @@ export default function HomePage() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1.4 }}
             className="p-8 rounded-xl shadow-md bg-blue-100"
           >
             <h2 className="text-3xl font-bold mb-6 text-center text-blue-900">Core Values</h2>
@@ -260,6 +259,8 @@ export default function HomePage() {
                 </p>
               </li>
             </ul>
+            <br></br>
+            <h3 className="text-3xl text-center font-bold text-blue-800">RIDGE- Top Of The Hills</h3>
           </motion.div>
 
           {/* Right Section: Images */}
@@ -267,24 +268,15 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="grid grid-cols-2 gap-20" 
+            transition={{ duration: 1.4 }}
+            className="grid grid-cols-1 gap-20" 
           >
             <img
-              src={c}
+              src={g}
               alt="About 1"
-              className="rounded-lg shadow-md relative min-h-72 min-w-96"
+              className="shadow-md h-full"
             />
-            <img
-              src={e}
-              alt="About 2"
-              className="rounded-lg shadow-md mt-28 relative"
-            />
-            <img
-              src={f}
-              alt="About 3"
-              className="rounded-lg shadow-md -mt-44  min-h-72 min-w-96"
-            />
+            
           </motion.div>
         </div>
       </div>

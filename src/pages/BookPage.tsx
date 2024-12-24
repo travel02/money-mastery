@@ -63,6 +63,7 @@ export default function BookPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.4 }}
           className="bg-gray-800 rounded-lg p-8 mb-12"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -164,7 +165,7 @@ Through this book, I share practical strategies to help others avoid financial p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.1 }}
+        transition={{ delay: 0.4 }}
         className="bg-gray-800 p-6 rounded-lg"
       >
         <div className="flex items-center mb-4">

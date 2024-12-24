@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone } from 'lucide-react';
 import { useState } from 'react';
-import { supabase } from '../lib/supabase'; // Ensure you have this setup
+import { supabase } from '../lib/supabase';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
   });
 
@@ -17,41 +18,46 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setFeedbackMessage(null);
-  
-    console.log('Form Data:', formData); // Log the form data for debugging
-  
+
     try {
-      const { error } = await supabase.from('messages').insert([formData]);
-  
+      const { error, data } = await supabase.from('messages').insert([formData]);
       if (error) {
-        console.error('Supabase Insert Error:', error); // Log detailed Supabase error
+        console.error('Insert Error:', error); // Detailed error log
         throw error;
       }
-  
+      console.log('Insert Success:', data); // Log successful response
       setFeedbackMessage('Thank you! Your message has been sent.');
-      setFormData({ name: '', email: '', message: '' }); // Reset the form on success
-    } catch (error) {
-      console.error('Submission Error:', error); // Log any catch-level errors
+    } catch {
       setFeedbackMessage('An error occurred while sending your message. Please try again.');
-    } finally {
+    }    
+     finally {
       setIsSubmitting(false);
     }
   };
-  
 
   return (
     <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="container mx-auto px-4"
+      >
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ scale: 0.95 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl font-bold text-center mb-12">Get in Touch</h1>
-
-          <div className="grid md:grid-cols-2 gap-12">
+          <motion.div
+            initial={{ y: -20 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="grid md:grid-cols-2 gap-12"
+          >
             {/* Contact Information */}
-            <div className="space-y-8">
+            <motion.div whileHover={{ scale: 1.05 }} className="space-y-8">
               <div>
                 <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
                 <div className="space-y-4">
@@ -63,7 +69,7 @@ export default function ContactPage() {
                     <span>moneymasterysanjay@gmail.com</span>
                   </a>
                   <a
-                    href="tel:+7070000000"
+                    href="tel:+917070000000"
                     className="flex items-center space-x-3 text-gray-300 hover:text-yellow-500 transition-colors"
                   >
                     <Phone size={20} />
@@ -71,10 +77,9 @@ export default function ContactPage() {
                   </a>
                 </div>
               </div>
-
               <div>
                 <h2 className="text-2xl font-bold mb-4">Follow Us</h2>
-                <div className="flex space-x-6">
+                <motion.div whileHover={{ scale: 1.1 }} className="flex space-x-6">
                   <a href="#" className="text-gray-300 hover:text-yellow-500 transition-colors">
                     <Facebook size={24} />
                   </a>
@@ -87,12 +92,16 @@ export default function ContactPage() {
                   <a href="#" className="text-gray-300 hover:text-yellow-500 transition-colors">
                     <Youtube size={24} />
                   </a>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <motion.form
+              whileHover={{ scale: 1.02 }}
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
               <div>
                 <label className="block text-sm font-medium mb-2">Name</label>
                 <input
@@ -114,6 +123,15 @@ export default function ContactPage() {
                 />
               </div>
               <div>
+                <label className="block text-sm font-medium mb-2">Phone (optional)</label>
+                <input
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="w-full px-4 py-2 bg-gray-800 rounded-lg border border-gray-700 focus:outline-none focus:border-yellow-500"
+                />
+              </div>
+              <div>
                 <label className="block text-sm font-medium mb-2">Message</label>
                 <textarea
                   value={formData.message}
@@ -131,14 +149,18 @@ export default function ContactPage() {
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
               {feedbackMessage && (
-                <p className={`text-center mt-4 ${feedbackMessage.includes('Thank') ? 'text-green-500' : 'text-red-500'}`}>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className={`text-center mt-4 ${feedbackMessage.includes('Thank') ? 'text-green-500' : 'text-red-500'}`}
+                >
                   {feedbackMessage}
-                </p>
+                </motion.p>
               )}
-            </form>
-          </div>
+            </motion.form>
+          </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 }
